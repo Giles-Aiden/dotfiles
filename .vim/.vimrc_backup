@@ -1,0 +1,54 @@
+set nocompatible
+
+" -----Plugins-----
+
+call plug#begin('~/.vim/plugged')
+" Autocomplete Auto Popup
+Plug 'vim-scripts/AutoComplPop'
+" GruBox Theme
+Plug 'morhetz/gruvbox'
+" NerdTree file explorer
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+" Fuzzy File Finder
+Plug 'kien/ctrlp.vim'
+" Self Explanitory Plugs
+Plug 'posva/vim-vue'
+call plug#end()
+
+filetype plugin on
+
+" syntax highlight
+syntax on
+" Allows windows to be stored in buffers
+set hidden
+
+" -----Plugin and Vim settings-----
+
+" GruvBox Style
+let g:gruvbox_italic=1
+let g:gruvbox_improved_strings=1
+let g:gruvbox_improved_warnings=1
+let g:gruvbox_contrast_dark='hard'
+autocmd vimenter * ++nested colorscheme gruvbox
+set bg=dark
+
+" Vim Autocomplete
+set complete+=kspell
+set completeopt=menuone,longest
+" Removes  autocomplete logging
+set shortmess+=c
+
+" Vim-Vue
+let g:vue_pre_processors = ['typescript', 'scss']
+
+" Nerd tree
+nmap <F3> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+" Alt + Arrow window shortcuts
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
