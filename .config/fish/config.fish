@@ -1,5 +1,7 @@
-alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.config/dotfiles/git --work-tree=$HOME'
 
+alias nv='nvim'
+alias vim='nv'
 alias vi='vim'
 alias g='git'
 alias ls='lsd'
