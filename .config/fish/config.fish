@@ -8,6 +8,11 @@ alias ls='lsd'
 alias ll='ls -l'
 alias la='ll -a'
 
+alias chia='sh \
+            cd ~/Code/chia-blockchain \
+            . ./activate \
+            chia'
+
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
